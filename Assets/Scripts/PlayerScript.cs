@@ -13,7 +13,7 @@ public class PlayerScript : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        _rbody = GetComponent<Rigidbody2D>(); 
+        _rbody = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
@@ -48,7 +48,7 @@ public class PlayerScript : MonoBehaviour
 
     public void OnCollisionExit2D(Collision2D collision)
     {
-       if (collision.gameObject.CompareTag("Ground"))
+        if (collision.gameObject.CompareTag("Ground"))
         {
             isGrounded = false;
         }
