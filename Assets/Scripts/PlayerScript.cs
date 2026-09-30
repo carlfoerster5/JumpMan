@@ -5,7 +5,7 @@ public class PlayerScript : MonoBehaviour
 {
     public float speed = 5f;
     public float chargeSpeed = 0.2f;
-    public float maxJumpSpeed = 12f;
+    public float maxJumpSpeed = 10f;
     public float minJumpSpeed = 5f;
     public float horizontalJumpSpeed = 4f;
 
