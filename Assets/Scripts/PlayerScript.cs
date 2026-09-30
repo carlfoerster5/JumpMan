@@ -73,13 +73,13 @@ public class PlayerScript : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Ground"))
+        if (collision.gameObject.CompareTag("Ground") && _rbody.linearVelocity.y <= 0.1f)
             isGrounded = true;
     }
 
     void OnCollisionStay2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Ground"))
+        if (collision.gameObject.CompareTag("Ground") && _rbody.linearVelocity.y <= 0.1f)
             isGrounded = true;
     }
 
