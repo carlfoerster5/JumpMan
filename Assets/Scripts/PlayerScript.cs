@@ -47,6 +47,11 @@ public class PlayerScript : MonoBehaviour
             _rbody.linearVelocity = new Vector2(xDir * horizontalJumpSpeed, jumpSpeed);
             isGrounded = false;
         }
+
+        if (_rbody.linearVelocity.y >= 0.1f)
+        {
+            isGrounded = false;
+        }
     }
 
     void FixedUpdate()
