@@ -35,7 +35,7 @@ public class PlayerScript : MonoBehaviour
             jumpSpeed = minJumpSpeed;
         }
 
-        if (_jumpAction.WasReleasedThisFrame() && isCharging)
+        if (_jumpAction.WasReleasedThisFrame() && isCharging && isGrounded)
         {
             isCharging = false;
             float xDir = 0f;
