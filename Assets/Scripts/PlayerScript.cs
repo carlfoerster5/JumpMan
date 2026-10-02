@@ -29,13 +29,17 @@ public class PlayerScript : MonoBehaviour
     // used this instead of OnJump since was having lots of trouble detecting release of charge that way
     void Update()
     {
+        if (!isGrounded)
+        {
+            isCharging = false;
+        }
         if (_jumpAction.WasPressedThisFrame() && isGrounded)
         {
             isCharging = true;
             jumpSpeed = minJumpSpeed;
         }
 
-        if (_jumpAction.WasReleasedThisFrame() && isCharging && isGrounded)
+        if (_jumpAction.WasReleasedThisFrame() && isCharging)
         {
             isCharging = false;
             float xDir = 0f;
